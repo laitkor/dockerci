@@ -1,0 +1,10 @@
+image: node:4.2.2
+
+  script:
+    - pwd
+    - hostname
+    - whoami
+    - export PATH=/home/gitlab-runner/.nvm/versions/node/v6.10.0/bin:$PATH
+    - node --version
+    - BUILD_DIR=`pwd`
+    - sh /home/gitlab-runner/make-build-master.sh ${BUILD_DIR}
